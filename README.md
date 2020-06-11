@@ -1,7 +1,7 @@
 # ticketsystem
 
 ALTER TABLE TICKET ALTER COLUMN FLIGHT VARCHAR(16777216) ;
-I increase the size  because I saved  as json
+  I increase the size  because I saved  as json
 
 
 en son response
