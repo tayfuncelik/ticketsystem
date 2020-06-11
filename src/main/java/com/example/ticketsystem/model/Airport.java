@@ -1,6 +1,15 @@
 package com.example.ticketsystem.model;
 
-public class Airport {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+public class Airport implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "airport_id")
+    protected Long id;
 
     private String name;
 
@@ -10,5 +19,13 @@ public class Airport {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

@@ -1,10 +1,26 @@
 package com.example.ticketsystem.model;
 
-public class Flight {
+import javax.persistence.*;
+
+@Entity
+public class Flight extends BaseEntity {
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "company_id")
     private Company company;  //THY,PEGASUS
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "route_id")
     private Route route;     // from Istanbul to Izmir
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "airport_id")
     private Airport airport; //Istanbul
-    private Integer quota;  // 12/100
+
+    private Float price;
+    private Integer soldSeat;  // 12
+    private Integer quota;  // 100
+
 
     public Company getCompany() {
         return company;
@@ -36,5 +52,21 @@ public class Flight {
 
     public void setQuota(Integer quota) {
         this.quota = quota;
+    }
+
+    public Float getPrice() {
+        return price;
+    }
+
+    public void setPrice(Float price) {
+        this.price = price;
+    }
+
+    public Integer getSoldSeat() {
+        return soldSeat;
+    }
+
+    public void setSoldSeat(Integer soldSeat) {
+        this.soldSeat = soldSeat;
     }
 }

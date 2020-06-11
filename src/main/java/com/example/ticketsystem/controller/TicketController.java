@@ -24,6 +24,7 @@ public class TicketController {
 
     @PostMapping("/add")
     public void addFlight(@ApiParam("Ticket object ") @RequestBody Ticket ticket) {
+
         ticketService.addTicket(ticket);
     }
 }

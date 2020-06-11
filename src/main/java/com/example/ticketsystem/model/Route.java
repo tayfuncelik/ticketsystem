@@ -1,6 +1,15 @@
 package com.example.ticketsystem.model;
 
-public class Route {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+public class Route implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "route_id")
+    protected Long id;
+
     private String originDestination;
     private String destination;
     private String departureTime;
@@ -37,5 +46,13 @@ public class Route {
 
     public void setLandingTime(String landingTime) {
         this.landingTime = landingTime;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

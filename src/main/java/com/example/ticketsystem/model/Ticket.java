@@ -2,10 +2,13 @@ package com.example.ticketsystem.model;
 
 import com.example.ticketsystem.common.TicketStatus;
 
-public class Ticket {
+import javax.persistence.Entity;
+
+@Entity
+public class Ticket extends BaseEntity {
     private Flight flight;
     private TicketStatus ticketStatus;
-    private Double price;
+    private Double cost;
 
     public Flight getFlight() {
         return flight;
@@ -23,11 +26,11 @@ public class Ticket {
         this.ticketStatus = ticketStatus;
     }
 
-    public Double getPrice() {
-        return price;
+    public Double getCost() {
+        return cost;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setCost(Double cost) {
+        this.cost = cost;
     }
 }
