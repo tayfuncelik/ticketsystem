@@ -6,6 +6,31 @@ ALTER TABLE TICKET ALTER COLUMN FLIGHT VARCHAR(16777216) ;
 I increase the size  because I saved  as json
 ```
 
+We will expose our API 
+
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+and will be avaliable to see 
+http://localhost:8080/v2/api-docs
+
+
+
+and there is also UI tool for these
+http://localhost:8080/swagger-ui.html
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        
+        
+
+
 en son response
 
 ```
@@ -93,26 +118,3 @@ add Ticket
 
 ```
 
-We will expose our API 
-
-
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-and will be avaliable to see 
-http://localhost:8080/v2/api-docs
-
-
-
-and there is also UI tool for these
-http://localhost:8080/swagger-ui.html
-
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-        
-        
